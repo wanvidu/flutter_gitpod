@@ -20,5 +20,5 @@ USER gitpod
 RUN cd /home/gitpod && wget -qO flutter_sdk.tar.xz https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.6-stable.tar.xz \
     && tar -xvf flutter_sdk.tar.xz && rm flutter_sdk.tar.xz && \
     wget -qO android_studio.tar.gz https://dl.google.com/dl/android/studio/ide-zips/3.5.2.0/android-studio-ide-191.5977832-linux.tar.gz && \
-    unzip android_studio.tar.gz && rm -f android_studio.tar.gz && \
+    tar -xvf android_studio.tar.gz && rm -f android_studio.tar.gz && \
     wget --output-document=android-sdk.tgz --quiet http://dl.google.com/android/android-sdk_r26.1.1-linux.tgz && tar -xvf android-sdk.tgz && rm android-sdk.tgz;
